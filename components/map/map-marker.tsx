@@ -6,7 +6,7 @@ import React, { useEffect, useRef } from "react";
 import { useMap } from "@/context/map-context";
 import { LocationFeature } from "@/lib/mapbox/utils";
 
-type Props = {
+type MarkerProps = {
   longitude: number;
   latitude: number;
   data: any;
@@ -33,7 +33,7 @@ type Props = {
   children?: React.ReactNode;
 } & MarkerOptions;
 
-export default function Marker({ children, latitude, longitude, data, onHover, onClick, ...props }: Props) {
+export default function Marker({ children, latitude, longitude, data, onHover, onClick, ...props }: MarkerProps) {
   const { map } = useMap();
   const markerRef = useRef<HTMLDivElement | null>(null);
   let marker: MapboxMarker | null = null;

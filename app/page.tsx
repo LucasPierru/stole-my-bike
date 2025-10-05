@@ -1,8 +1,9 @@
 import Map from "@/components/map/map";
+import { getReports } from "@/mock/reports";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="w-screen h-screen">
+    <div className="min-w-screen h-[calc(100vh-4rem)]">
       <Map />
     </div>
   );

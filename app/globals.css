@@ -121,6 +121,10 @@
   }
 }
 
+body {
+  box-sizing: border-box;
+}
+
 /* Custom Mapbox Popup Styling */
 .mapboxgl-custom-popup .mapboxgl-popup-content {
   @apply bg-card text-card-foreground p-5 rounded-lg;

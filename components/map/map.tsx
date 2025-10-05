@@ -6,13 +6,14 @@ import MapProvider from "@/lib/mapbox/provider";
 import MapStyles from "@/components/map/map-styles";
 import MapControls from "@/components/map/map-controls";
 import MapSearch from "@/components/map/map-search";
+import ReportsMarker from "../reports-marker";
 
 export default function Map() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <>
-      <div id="map-container" ref={mapContainerRef} className="absolute inset-0 h-full w-full" />
+    <div className="relative w-full h-full">
+      <div id="map-container" ref={mapContainerRef} className="absolute h-full w-full" />
 
       <MapProvider
         mapContainerRef={mapContainerRef}
@@ -24,7 +25,8 @@ export default function Map() {
         <MapSearch />
         <MapControls />
         <MapStyles />
+        <ReportsMarker />
       </MapProvider>
-    </>
+    </div>
   );
 }
